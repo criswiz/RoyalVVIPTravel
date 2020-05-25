@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "413786199032",
+    "firebase_url": "https://afmadsformoney.firebaseio.com",
+    "project_id": "afmadsformoney",
+    "storage_bucket": "afmadsformoney.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413786199032:android:bd95b3b2429c2332aefc0d",
+        "android_client_info": {
+          "package_name": "com.example.royalvviptravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413786199032-6cuf4g9ciki1tdlkph6c1jlhsnjjn73m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.royalvviptravel",
+            "certificate_hash": "e9508532a21e5fec1d9bbbce7775f2c098a368d6"
+          }
+        },
+        {
+          "client_id": "413786199032-fe5a7lfgnal50hc82iqvop5e21tqd6g6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxA2s0zBXMiG2kvM3TdubVIj1y4ioV9-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413786199032-fe5a7lfgnal50hc82iqvop5e21tqd6g6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
