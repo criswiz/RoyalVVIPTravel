@@ -68,11 +68,31 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 User user = new User();
-                user.setFirstName(firstName.getText().toString());
-                user.setLastName(lastName.getText().toString());
-                user.setEmail(email.getText().toString());
-                user.setPhoneNumber(phoneNumber.getText().toString());
-                user.setPassword(password.getText().toString());
+                if (firstName.getText().toString().isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Please Enter First Name", Toast.LENGTH_SHORT).show();
+                }else {
+                    user.setFirstName(firstName.getText().toString());
+                }
+                if(lastName.getText().toString().isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Please Enter Last Name", Toast.LENGTH_SHORT).show();
+                } else {
+                    user.setLastName(lastName.getText().toString());
+                }
+                if(email.getText().toString().isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Enter an Email Address", Toast.LENGTH_SHORT).show();
+                } else {
+                    user.setEmail(email.getText().toString());
+                }
+                if(phoneNumber.getText().toString().isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Enter a Phone Number", Toast.LENGTH_SHORT).show();
+                } else{
+                    user.setPhoneNumber(phoneNumber.getText().toString());
+                }
+                if (password.getText().toString().isEmpty()){
+                    Toast.makeText(RegisterActivity.this, "Enter password", Toast.LENGTH_SHORT).show();
+                }else{
+                    user.setPassword(password.getText().toString());
+                }
 
                 registerUser(user.getEmail(), user.getPassword());
             }
@@ -89,39 +109,42 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void registerUser(String email, String password){
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        load.setVisibility(View.VISIBLE);
-                        if (task.isSuccessful()) {
-                            load.setVisibility(View.GONE);
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            String userId = user.getUid();
-                            User userInfo = new User();
-                            userInfo.setFirstName(firstName.getText().toString());
-                            userInfo.setLastName(lastName.getText().toString());
-                            userInfo.setPhoneNumber(phoneNumber.getText().toString());
-                            reference.child(userId).setValue(userInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful()){
-                                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                                        startActivity(intent);
-                                        finish();
+        if(email.isEmpty() && password.isEmpty()) {
+            Toast.makeText(this, "Please Provide All Information", Toast.LENGTH_SHORT).show();
+        } else{
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            load.setVisibility(View.VISIBLE);
+                            if (task.isSuccessful()) {
+                                load.setVisibility(View.GONE);
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                String userId = user.getUid();
+                                User userInfo = new User();
+                                userInfo.setFirstName(firstName.getText().toString());
+                                userInfo.setLastName(lastName.getText().toString());
+                                userInfo.setPhoneNumber(phoneNumber.getText().toString());
+                                reference.child(userId).setValue(userInfo).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
                                     }
-                                }
-                            });
-                        } else {
-                            load.setVisibility(View.GONE);
-                            Toast.makeText(RegisterActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                                });
+                            } else {
+                                load.setVisibility(View.GONE);
+                                Toast.makeText(RegisterActivity.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+
                         }
+                    });
 
-                    }
-                });
-
-
+        }
 
     }
 

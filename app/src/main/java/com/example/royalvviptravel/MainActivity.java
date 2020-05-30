@@ -15,6 +15,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.royalvviptravel.Model.SearchBuses;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference reference;
+    DatabaseReference referenceDestination;
     FirebaseAuth mAuth;
 
     @Override
@@ -45,8 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
-        String userId = user.getUid();
+        final String userId;
+        if (user != null) {
+            userId = user.getUid();
+            referenceDestination = database.getReference().child("Users").child(userId);
+        }
         reference = database.getReference().child("Users");
+
 
         search_buses = findViewById(R.id.search_buses);
         signOut = findViewById(R.id.signOut);
@@ -58,8 +67,22 @@ public class MainActivity extends AppCompatActivity {
         search_buses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),SecondActivity.class);
-                startActivity(intent);
+                SearchBuses searchBuses = new SearchBuses();
+                searchBuses.setDestination(destination.getText().toString());
+                searchBuses.setFrom(from.getText().toString());
+                searchBuses.setDate(date.getText().toString());
+
+                referenceDestination.child("TripInformation").setValue(searchBuses).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                            intent.putExtra("Destination", destination.getText().toString());
+                            intent.putExtra("From", destination.getText().toString());
+                            startActivity(intent);
+                        }
+                    }
+                });
             }
         });
 
@@ -79,7 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 if (dataSnapshot.exists()){
                     if (dataSnapshot.child("firstName").getValue() != null){
                         String username = dataSnapshot.child("firstName").getValue().toString();
-                        Toast.makeText(MainActivity.this, username, Toast.LENGTH_SHORT).show();
                         firstName.setText("Hey " + username + "!");
                     }
                 }
@@ -105,5 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 }
