@@ -171,6 +171,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/time1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -179,6 +180,7 @@
                                 android:textColor="#000000"
                                 />
                             <TextView
+                                android:id="@+id/busName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -198,6 +200,7 @@
                             android:gravity="center"
                             android:orientation="vertical">
                             <TextView
+                                android:id="@+id/price1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -249,6 +252,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/time2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -276,6 +280,7 @@
                             android:gravity="center"
                             android:orientation="vertical">
                             <TextView
+                                android:id="@+id/price2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -327,6 +332,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/time3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -338,7 +344,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
-                                android:text="@string/start_service"
+                                android:text="@string/royal_vvip_travel"
                                 android:textStyle="bold"
                                 android:layout_marginTop="4dp"
                                 android:layout_marginBottom="4dp"
@@ -354,6 +360,7 @@
                             android:gravity="center"
                             android:orientation="vertical">
                             <TextView
+                                android:id="@+id/price3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -405,6 +412,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/time4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -433,6 +441,7 @@
                             android:gravity="center"
                             android:orientation="vertical">
                             <TextView
+                                android:id="@+id/price4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -484,6 +493,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/time5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"
@@ -512,6 +522,7 @@
                             android:gravity="center"
                             android:orientation="vertical">
                             <TextView
+                                android:id="@+id/price5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/calibri"

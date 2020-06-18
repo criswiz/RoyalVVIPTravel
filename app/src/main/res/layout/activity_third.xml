@@ -183,16 +183,9 @@
                                     android:layout_marginBottom="4dp"
                                     android:layout_marginTop="4dp"
                                     android:fontFamily="@font/calibri"
-                                    android:text="@string/expo_bus_service"
+                                    android:text="@string/royal_vvip_travel"
                                     android:textColor="#4b4b4b"
                                     android:textStyle="bold" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/calibri"
-                                    android:text="@string/a_c_sleeper_2_2"
-                                    android:textColor="#8a8a8a" />
 
                             </LinearLayout>
 
@@ -224,7 +217,9 @@
                                     android:textAlignment="textEnd"
                                     android:textColor="#b3b3b3"
                                     android:layout_gravity="end" />
+
                             </LinearLayout>
+
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -456,6 +451,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat1a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -464,6 +460,7 @@
                                     android:contentDescription="@string/booked" />
 
                                 <ImageView
+                                    android:id="@+id/seat1b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -480,6 +477,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat1c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -488,6 +486,7 @@
                                     android:contentDescription="@string/booked" />
 
                                 <ImageView
+                                    android:id="@+id/seat1d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -526,6 +525,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat2a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -534,6 +534,7 @@
                                     android:contentDescription="@string/available" />
 
                                 <ImageView
+                                    android:id="@+id/seat2b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -550,6 +551,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat2c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -558,6 +560,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat2d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -596,6 +599,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat3a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -604,6 +608,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat3b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -620,6 +625,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat3c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -628,6 +634,7 @@
                                     android:contentDescription="@string/available" />
 
                                 <ImageView
+                                    android:id="@+id/seat3d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -666,6 +673,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat4a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -674,6 +682,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat4b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -690,6 +699,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat4c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -698,6 +708,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat4d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -736,6 +747,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat5a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -744,6 +756,7 @@
                                     android:contentDescription="@string/booked" />
 
                                 <ImageView
+                                    android:id="@+id/seat5b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -760,6 +773,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat5c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -768,6 +782,7 @@
                                     android:contentDescription="@string/your_seat" />
 
                                 <ImageView
+                                    android:id="@+id/seat5d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -806,6 +821,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat6a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -814,6 +830,7 @@
                                     android:contentDescription="@string/available" />
 
                                 <ImageView
+                                    android:id="@+id/seat6b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -830,6 +847,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat6c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -838,6 +856,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat6d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -876,6 +895,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat7a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -884,6 +904,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat7b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -900,6 +921,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat7c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -908,6 +930,7 @@
                                     android:contentDescription="@string/available" />
 
                                 <ImageView
+                                    android:id="@+id/seat7d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -946,6 +969,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat8a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -954,6 +978,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat8b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -970,6 +995,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat8c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -978,6 +1004,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat8d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -1016,6 +1043,7 @@
                                     android:layout_marginEnd="16dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat9a"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -1024,6 +1052,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat9b"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"
@@ -1040,6 +1069,7 @@
                                 android:gravity="center">
 
                                 <ImageView
+                                    android:id="@+id/seat9c"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginRight="4dp"
@@ -1048,6 +1078,7 @@
                                     android:layout_marginEnd="4dp" />
 
                                 <ImageView
+                                    android:id="@+id/seat9d"
                                     android:layout_width="36dp"
                                     android:layout_height="36dp"
                                     android:layout_marginLeft="4dp"

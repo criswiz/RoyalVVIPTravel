@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                             intent.putExtra("Destination", destination.getText().toString());
-                            intent.putExtra("From", destination.getText().toString());
+                            intent.putExtra("From", from.getText().toString());
                             startActivity(intent);
                         }
                     }
